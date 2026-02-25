@@ -34,3 +34,29 @@
     form.reset();
   });
 })();
+// Demo: botón de "Solicitar diagnóstico" (Home)
+(() => {
+  const btn = document.getElementById("btn");
+  const msg = document.getElementById("msg");
+
+  // Si no estamos en Home, no hacemos nada
+  if (!btn || !msg) return;
+
+  btn.addEventListener("click", function () {
+    msg.textContent =
+      "✅ Solicitud recibida. Un asesor de TecnoWebSupport te contactará pronto para coordinar el diagnóstico.";
+
+    msg.style.marginTop = "10px";
+    msg.style.color = "#16a34a";
+    msg.style.fontWeight = "600";
+
+    btn.textContent = "Solicitud enviada ✓";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+    btn.style.cursor = "not-allowed";
+
+    setTimeout(function () {
+        msg.textContent = "";
+    }, 4000);
+  });
+})();

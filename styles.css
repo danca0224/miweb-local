@@ -88,7 +88,14 @@ button {
   background: #fff;
   cursor: pointer;
 }
-button:hover { background: #f3f3f3; }
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56,189,248,.25);
+}
+
+button {
+  transition: all 0.25s ease;
+}
 
 input, textarea {
   width: 100%;
@@ -106,4 +113,8 @@ footer {
   padding: 0 16px 30px;
   color: #cbd5e1;
   font-size: 14px;
+}
+
+#msg {
+  transition: all 0.4s ease;
 }
