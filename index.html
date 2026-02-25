@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi web local - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">MiWebLocal</a>
+    <div class="links">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Home 👋</h1>
+  <p>Este es un mini sitio con varias páginas corriendo en <b>localhost</b>.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Estado</h2>
+      <p>Servidor local activo. CSS y JS cargando.</p>
+      <button id="btn">Probar JS</button>
+      <p id="msg" style="margin-top:10px;"></p>
+    </section>
+
+    <section class="card">
+      <h2>¿Qué sigue?</h2>
+      <ul>
+        <li>Agregar imágenes</li>
+        <li>Crear carpeta <code>assets/</code></li>
+        <li>Hacer menú responsive</li>
+        <li>Subirlo luego a internet</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer>
+  Hecho en local con Python http.server — <span id="year"></span>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

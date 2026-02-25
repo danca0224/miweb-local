@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi web local - Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">MiWebLocal</a>
+    <div class="links">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Contacto</h1>
+
+  <section class="card">
+    <p>Este formulario es solo una simulación (no envía emails). Sirve para probar JS.</p>
+
+    <form id="contactForm">
+      <label>Nombre
+        <input id="nombre" required placeholder="Tu nombre" />
+      </label>
+
+      <label>Correo
+        <input id="correo" type="email" required placeholder="tu@correo.com" />
+      </label>
+
+      <label>Mensaje
+        <textarea id="mensaje" required rows="4" placeholder="Escribe tu mensaje"></textarea>
+      </label>
+
+      <div style="margin-top:12px;">
+        <button type="submit">Enviar (simulado)</button>
+      </div>
+    </form>
+
+    <p id="formOut" style="margin-top:12px;"></p>
+  </section>
+</main>
+
+<footer>
+  Formulario local (sin backend) ✅
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
