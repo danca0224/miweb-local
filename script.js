@@ -90,3 +90,35 @@
     window.open(url, "_blank", "noopener,noreferrer");
   });
 })();
+
+// SSL Scan (abre SSL Labs con el dominio)
+(() => {
+  const host = document.getElementById("host");
+  const btn = document.getElementById("sslBtn");
+  const msg = document.getElementById("sslMsg");
+
+  // Si no estamos en ssl.html, no hacemos nada
+  if (!host || !btn || !msg) return;
+
+  btn.addEventListener("click", () => {
+    const domain = host.value.trim().replace(/^https?:\/\//, "");
+
+    if (!domain) {
+      msg.textContent = "⚠️ Escribe un dominio, por ejemplo: bogota.gov.co";
+      msg.style.color = "#b45309";
+      return;
+    }
+
+    const url = `https://www.ssllabs.com/ssltest/analyze.html?d=${encodeURIComponent(domain)}`;
+
+    msg.textContent = `Abriendo análisis para: ${domain}...`;
+    msg.style.color = "#16a34a";
+
+    // Crear enlace dinámico (no se bloquea)
+    const link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.click();
+  });
+})();
