@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TecnoWebSupport - SSL Scan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html">TecnoWebSupport</a>
+
+      <div class="links">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="ssl.html">SSL Scan</a>
+        <a data-nav href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>SSL Scan 🔒</h1>
+    <p>Escribe un dominio y abriremos el análisis en SSL Labs (Qualys).</p>
+
+    <section class="card">
+      <label for="host">Dominio (sin https://)</label>
+      <input id="host" type="text" placeholder="ej: tecnowebsupport.com" />
+      <button id="sslBtn" style="margin-top:10px;">Analizar SSL</button>
+
+      <p id="sslMsg" style="margin-top:10px;"></p>
+
+      <small>
+        Tip: usa solo el dominio, por ejemplo <b>google.com</b> o <b>example.com</b>.
+      </small>
+    </section>
+  </main>
+
+  <footer>
+    TecnoWebSupport — 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Ir a la carpeta del proyecto en powershell
+cd C:\Users\rd.cardenasramos\Documents\MiWebLocal
+
+arrancarlo indicando la carpeta (sin moverte)
+python -m http.server 8000 --directory "C:\Users\rd.cardenasramos\Documents\MiWebLocal"
+
+Arranca el servidor
+python -m http.server 8000
+
+Verificar cambios
+git status
+
+Agregar cambios
+git add .
+
+Crear commit
+git commit -m "Descripción breve del cambio"
+
+Subir a GitHub
+git push
+
+cd C:\Users\rd.cardenasramos\Documents\MiWebLocal
+git status
+git add .
+git commit -m "mensaje"
+git push

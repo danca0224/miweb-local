@@ -60,3 +60,33 @@
     }, 4000);
   });
 })();
+
+// 🔒 SSL Scan
+(() => {
+  const hostInput = document.getElementById("host");
+  const sslBtn = document.getElementById("sslBtn");
+  const sslMsg = document.getElementById("sslMsg");
+
+  if (!hostInput || !sslBtn || !sslMsg) return;
+
+  const normalizeHost = (value) => {
+    let h = value.trim();
+    h = h.replace(/^https?:\/\//i, "");
+    h = h.split("/")[0];
+    return h;
+  };
+
+  sslBtn.addEventListener("click", () => {
+    const host = normalizeHost(hostInput.value);
+
+    if (!host) {
+      sslMsg.textContent = "⚠️ Escribe un dominio válido. Ej: example.com";
+      return;
+    }
+
+    sslMsg.textContent = `Abriendo análisis para: ${host} ...`;
+
+    const url = `https://www.ssllabs.com/ssltest/analyze.html?d=${encodeURIComponent(host)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+})();
